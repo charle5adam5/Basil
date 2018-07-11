@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+@import url('https://fonts.googleapis.com/css?family=Philosopher');
+
+body {
+ font-family: 'Varela Round', sans-serif;
+ max-width: 1000px;
+ margin: 0;
+ padding: 0;
+ margin: 0 auto;
+}
+
+.title {
+    margin-left: 5%;
+}
+
+
+@keyframes fadeIn {
+    from {
+     opacity: 0;
+     transform: translateY(20%);
+    }
+    to {
+     opacity: 1;
+     transform: translateY(0%);
+    }
+   }
+.header-box {
+ display: flex;
+ flex-flow: column;
+ align-items: center;
+ justify-content: space-around;
+ height: 100vh; 
+ min-height: 500px;
+}
+.header-title {
+    font-family: 'Philosopher', sans-serif;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+
+header {
+ display: flex;
+ flex-flow: column;
+ align-items: center;
+ justify-content: space-around;
+ background: url('./images/mainsea.jpg');
+ height: 90%;
+ width: 90%;
+ max-width: 1000px;
+ background-size: cover;
+ background-repeat: no-repeat;
+ box-shadow: 5px 5px 1px darkturquoise;
+ animation: fadeIn 2s ease;
+ animation-fill-mode: forwards;
+ color: white;
+}
+
+
+.header-title > h3{
+    margin: -7px;
+}
+.head {
+    padding: 15px;
+    border: solid 5px white;
+    border-radius: 50%;
+}
+.name {
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 2px darkturquoise;
+}
+
+
+nav {
+ display: flex;
+ flex-flow: row;
+ justify-content: space-between;
+ width: 80%;
+ margin-top: 100px;
+ text-align: center;
+}
+.nav-item {
+ margin: 0px 5px 0px 5px;
+ text-decoration: none;
+ color: white;
+ font-size: 1.5em;
+ text-align: center;
+}
+.nav-item:hover {
+    text-decoration: underline;
+}
+
+
+.legend {
+    display: flex;
+    flex-flow: row;
+    margin: 10px;
+    margin-left: 5%;
+    border: solid 2px black;
+    width: 60%;
+    justify-content: space-around;
+    padding: 5px;
+}
+@media screen and (max-width: 800px) {
+    .legend {
+        font-size: .75em;
+    }
+}
+@media screen and (max-width: 600px) {
+    .legend {
+        font-size: .45em;
+    }
+}
+.legend-key {
+    align-self: center;
+    border-bottom: solid 3px black;
+}
+
+.view-wrap {
+    display: flex;
+    flex-flow: row;
+    width: 90vw;
+    margin-top: 5%;
+    margin-bottom: -2%;
+    padding: 0;
+}
+.view-text {
+    margin-left: 30px;
+    font-size: 1.2em;
+}
+
+.open-info {
+    height: 20px;
+    width: 20px;
+}
+.close-info {
+    transform: rotate(180deg);
+}
+
+.info-wrap {
+    display: flex;
+    flex-flow: row;
+    margin: 0 auto;
+    font-size: 5px;
+    max-width: 900px;
+    overflow-x: scroll;
+    padding: 0 50px;
+}
+
+.info {
+    max-height: 200px;
+    min-width: 60px;
+    width: 200px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.info:hover:before{
+    content: '\25B6';
+}
+
+.view-info {
+    overflow-y: scroll;
+    font-size: 3em;
+    max-height: 600px;
+    min-width: 80vw;
+}
+
+.partial {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    shape-outside: circle(50%);
+    float: left;
+    margin: 10px;
+}
+.partial:nth-child(2n) {
+    float: right;
+}
+
+.lrg-partial {
+    height: 100px;
+    width: 100px;
+}
+
+.text-head {
+ text-align: center; 
+}
+
+.text-wrap {
+ border-top: solid 3px darkturquoise;
+ border-left: solid 2px darkturquoise;
+ padding-top: 1%;
+}
+.text-wrap p {
+ margin: 5px 0px 0px 10px;
+ text-indent: 5%;
+ clear: both;
+}
+
+
+
+
+/* Gallery style */
+
+#gallery {
+    margin: 5% 5%;
+    max-width: 1000px;
+}
+.gallery-box {
+    background: url('./images/mainsea2.jpg') no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+   .gallery-items {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-around;
+    min-height: 300px;
+    width: 100%;
+    background: darkturquoise;
+    font-size: 1.5em;
+    mix-blend-mode: hard-light;
+   }
+   @media screen and (min-width: 800px) {
+       .gallery-items {
+           flex-flow: row;
+       }
+   }
+   .gal-item {
+    padding: 0 1%;
+ }
+   .gal-item:hover {
+       cursor: pointer;
+       border-bottom: solid 2px white;
+   }
+
+   .gal-grid {
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       grid-template-rows: repeat(5, 1fr);
+       justify-content: space-around;
+       grid-gap: 10px;
+   }
+   .grid-itm {
+    height: auto;
+    width: 100px;
+}
+@media screen and (max-width: 500px) {
+   .grid-itm {
+       width: 50px;
+   }
+}
+
+.key-symbol {
+    text-align: center;
+}
+
+.lrg-img {
+    display: block;
+    height: auto;
+    width: 50vw;
+    position: absolute;
+}
+
+   .sea {
+    display: none;
+   }
+   .land {
+    display: none;
+   }
+   .other {
+    display: none;
+   }
+   .close {
+    display: none;
+   }
+   .styledClose {
+    border: none;
+    position: sticky;
+    top: 400px;
+    background: white;
+    color: darkturquoise;
+    height: 30px;
+    width: 30px;
+    border: solid 3px darkturquoise;
+    cursor: pointer;
+    transform: translateY(-300px);
+    margin-left: 60%;
+   }
+   @media screen and (max-width: 800px) {
+    .stlyedClose {
+        top: 300px;
+    }
+   }
+   @keyframes showItem {
+    from {
+     opacity: 0;
+    }
+    to {
+     opacity: 1;
+    }
+   }
+   .show {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    animation: showItem 3s ease;
+   }
+   
+   @keyframes galSlide {
+       from{
+        transform: translateX(0);
+        opacity: 1;
+       }
+       to {
+        transform: translateX(-50%);
+        opacity: 0;
+       }
+   }
+   .galSlide {
+    margin: 0 auto;
+    animation: galSlide .5s ease;
+    animation-fill-mode: forwards;
+    transform: preserve-3d;
+   }
+   .slideBack {
+    margin: 0 auto;
+    transform: translate(0vmax, 0vmax);
+    transition: transform 1s ease;
+    animation-fill-mode: forwards;
+   }
+
+   .gallery-wrap {
+       display: grid;
+       grid-template-columns: 1fr 2fr 1fr;
+       justify-content: space-around;
+       margin: 0 auto;
+       width: 100vw;
+       max-width: 1000px;
+   }
+ 
+
+   .gallery-sections {
+       display: flex;
+       flex-flow: column;
+       justify-content: space-around;
+       margin: 0 auto;
+       height: auto;
+       width: 50%;
+       transform: translateY(-300px);
+   }
+
+   .contact-info {
+       display: flex;
+       flex-flow: column;
+       align-items: center;
+       justify-content: space-around;
+       border: solid 3px darkturquoise;
+       border-left: solid 30px darkturquoise; 
+       width: 300px;
+       margin: 0 auto;
+       margin-bottom: 50px;
+   }
