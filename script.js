@@ -20,10 +20,10 @@ info.forEach(item => {
         partial.forEach(img => {
             img.classList.toggle('lrg-partial');
         })
-        if (item.className != 'view-info') {
+
             item.classList.toggle('view-info');
-            viewBtn.classList.add('hide-btn');
-        } 
+            item.scrollTo({ top: 0 });
+            
     })
 })
 

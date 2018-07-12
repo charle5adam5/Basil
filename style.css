@@ -30,7 +30,7 @@ body {
  align-items: center;
  justify-content: space-around;
  height: 100vh; 
- min-height: 500px;
+ min-height: 600px;
 }
 .header-title {
     font-family: 'Philosopher', sans-serif;
@@ -145,6 +145,7 @@ nav {
     font-size: 5px;
     max-width: 900px;
     overflow-x: scroll;
+    overflow: hidden;
     padding: 0 50px;
 }
 
@@ -156,20 +157,26 @@ nav {
     cursor: pointer;
 }
 .info:hover:before{
-    content: '\25B6';
+    content: '\25E5';
 }
 
 .view-info {
     overflow-y: scroll;
+    position: absolute;
+    top: 600px;
+    left: 0px;
+    margin: 0 auto;
+    padding: 0 50px 0 50px;
+    background: white;
     font-size: 3em;
-    max-height: 600px;
-    min-width: 80vw;
+    min-height: 360px;
+    min-width: 85vw;
 }
 
 .partial {
     height: 20px;
     width: 20px;
-    border-radius: 50%;
+    border-radius: 100%;
     shape-outside: circle(50%);
     float: left;
     margin: 10px;
@@ -181,6 +188,12 @@ nav {
 .lrg-partial {
     height: 100px;
     width: 100px;
+}
+@media screen and (min-width: 700px) {
+    .lrg-partial {
+        height: 150px;
+        width: 150px;
+    }
 }
 
 .text-head {
