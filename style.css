@@ -40,9 +40,36 @@ body {
 .header-title {
     font-family: 'Philosopher', sans-serif;
     display: flex;
+    justify-content: space-around;
     flex-flow: column;
     align-items: center;
+    font-size: 1.2em;
+    background: darkturquoise;
+    border: solid 2px white;
+    padding: 20px;
+    mix-blend-mode: hard-light;
 }
+.header-extra {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+@media screen and (max-width: 600px) {
+    .header-title {
+        font-size: .75em;
+    }
+}
+header h4:before,
+header h4:after {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+}
+
 
 
 header {
@@ -62,10 +89,6 @@ header {
  color: white;
 }
 
-
-.header-title > h3{
-    margin: -7px;
-}
 .head {
     padding: 15px;
     border: solid 5px white;
@@ -73,7 +96,6 @@ header {
 }
 .name {
     letter-spacing: 10px;
-    text-shadow: 2px 2px 2px darkturquoise;
 }
 
 
@@ -148,6 +170,7 @@ nav {
     flex-flow: row;
     margin: 0 auto;
     font-size: 5px;
+    max-height: 300px;
     max-width: 900px;
     overflow-x: scroll;
     overflow: hidden;
@@ -155,7 +178,6 @@ nav {
 }
 
 .info {
-    max-height: 200px;
     min-width: 60px;
     width: 200px;
     overflow: hidden;
@@ -169,14 +191,14 @@ nav {
 .view-info {
     overflow-y: scroll;
     position: absolute;
-    top: 600px;
-    left: 0px;
+    top: 700px;
+    right: 1px;
     margin: 0 auto;
-    padding: 50px 30px 0px 30px;
+    padding: 30px 20% 0px 20%;
     background: white;
     font-size: 3em;
-    min-height: 360px;
-    min-width: 85vw;
+    height: 400px;
+    min-width: 60vw;
 }
 
 .partial {
@@ -223,7 +245,7 @@ nav {
 /* Gallery style */
 
 #gallery {
-    margin-top: 100px;
+    margin-top: 150px;
 }
 .gallery-box {
     background: url('./images/mainsea2.jpg') no-repeat;
@@ -267,6 +289,7 @@ nav {
     height: auto;
     width: 100px;
 }
+
 @media screen and (max-width: 500px) {
    .grid-itm {
        width: 50px;
@@ -278,10 +301,11 @@ nav {
 }
 
 .lrg-img {
-    display: block;
     height: auto;
-    width: 50vw;
+    width: 40vw;
     position: absolute;
+    left: 1px;
+    border: solid 5px black;
 }
 
    .sea {
@@ -373,6 +397,9 @@ nav {
        transform: translateY(-300px);
    }
 
+   #contact {
+       margin-top: 150px;
+   }
    .contact-wrap {
        display: flex;
        justify-content: space-around;

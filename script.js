@@ -13,6 +13,7 @@ const partial = document.querySelectorAll('.partial');
 
 // gallery image selector
 const gridItem = document.querySelectorAll('.grid-itm');
+const galBleh = document.querySelector('.gal-bleh');
 
 // toggling view mode for info
 info.forEach(item => {
@@ -62,4 +63,5 @@ gridItem.forEach(item => {
     item.addEventListener('click', () => {
         item.classList.toggle('lrg-img');
     })
+    
 })
