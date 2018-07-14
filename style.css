@@ -194,11 +194,11 @@ nav {
     top: 700px;
     right: 1px;
     margin: 0 auto;
-    padding: 30px 20% 0px 20%;
+    padding: 30px 15% 0px 15%;
     background: white;
     font-size: 3em;
     height: 400px;
-    min-width: 60vw;
+    min-width: 70vw;
 }
 
 .partial {
@@ -288,6 +288,7 @@ nav {
    .grid-itm {
     height: auto;
     width: 100px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 500px) {
@@ -305,7 +306,7 @@ nav {
     width: 40vw;
     position: absolute;
     left: 1px;
-    border: solid 5px black;
+    border: solid 3px black;
 }
 
    .sea {
@@ -393,7 +394,7 @@ nav {
        justify-content: space-around;
        margin: 0 auto;
        height: auto;
-       width: 50%;
+       width: 90%;
        transform: translateY(-300px);
    }
 
