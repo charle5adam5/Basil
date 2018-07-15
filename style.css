@@ -309,15 +309,10 @@ nav {
     border: solid 3px black;
 }
 
-   .sea {
+   .sec {
     display: none;
    }
-   .land {
-    display: none;
-   }
-   .other {
-    display: none;
-   }
+
    .close {
     display: none;
    }

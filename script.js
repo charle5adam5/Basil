@@ -1,9 +1,8 @@
 // Gallery selectors
 const gallery = document.querySelector('.gallery-box');
 const close = document.querySelector('.close');
-const sea = document.querySelector('.sea');
-const land = document.querySelector('.land');
-const other = document.querySelector('.other');
+const sec = document.querySelectorAll('.sec');
+
 
 // info selectors
 const info = document.querySelectorAll('.info');
@@ -53,9 +52,9 @@ close.addEventListener('click', () => {
  close.classList.remove('styledClose');
  gallery.classList.remove('galSlide');
  gallery.classList.add('slideBack');
- sea.classList.remove('show');
- land.classList.remove('show');
- other.classList.remove('show');
+ sec.forEach(section => {
+     section.classList.remove('show');
+    })
 })
 
 // expand images
