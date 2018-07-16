@@ -43,7 +43,7 @@ body {
     justify-content: space-around;
     flex-flow: column;
     align-items: center;
-    font-size: 1.2em;
+    font-size: 1.25em;
     background: darkturquoise;
     border: solid 2px white;
     padding: 20px;
@@ -56,7 +56,7 @@ body {
 }
 @media screen and (max-width: 600px) {
     .header-title {
-        font-size: .75em;
+        font-size: .60em;
     }
 }
 header h4:before,
@@ -78,8 +78,8 @@ header {
  align-items: center;
  justify-content: space-around;
  background: url('./images/mainsea.jpg');
- height: 90%;
- width: 90%;
+ height: 75%;
+ width: 75%;
  max-width: 1000px;
  background-size: cover;
  background-repeat: no-repeat;
@@ -104,7 +104,6 @@ nav {
  flex-flow: row;
  justify-content: space-between;
  width: 80%;
- margin-top: 100px;
  text-align: center;
 }
 .nav-item {
@@ -118,31 +117,6 @@ nav {
     text-decoration: underline;
 }
 
-
-.legend {
-    display: flex;
-    flex-flow: row;
-    margin: 10px;
-    margin-left: 5%;
-    border: solid 2px black;
-    width: 60%;
-    justify-content: space-around;
-    padding: 5px;
-}
-@media screen and (max-width: 800px) {
-    .legend {
-        font-size: .75em;
-    }
-}
-@media screen and (max-width: 600px) {
-    .legend {
-        font-size: .45em;
-    }
-}
-.legend-key {
-    align-self: center;
-    border-bottom: solid 3px black;
-}
 
 .view-wrap {
     display: flex;
@@ -191,13 +165,13 @@ nav {
 .view-info {
     overflow-y: scroll;
     position: absolute;
-    top: 700px;
+    top: 680px;
     right: 1px;
     margin: 0 auto;
-    padding: 30px 15% 0px 15%;
+    padding: 0px 15% 0px 15%;
     background: white;
     font-size: 3em;
-    height: 400px;
+    height: 420px;
     min-width: 70vw;
 }
 
@@ -247,6 +221,34 @@ nav {
 #gallery {
     margin-top: 150px;
 }
+.legend {
+    display: flex;
+    flex-flow: row;
+    margin: 10px;
+    margin-left: 5%;
+    border: solid 2px black;
+    width: 60%;
+    justify-content: space-around;
+    padding: 5px;
+}
+@media screen and (max-width: 800px) {
+    .legend {
+        font-size: .75em;
+    }
+}
+@media screen and (max-width: 600px) {
+    .legend {
+        font-size: .45em;
+    }
+}
+.legend-key {
+    align-self: center;
+    border-bottom: solid 3px black;
+}
+.key-symbol {
+    text-align: center;
+   }
+
 .gallery-box {
     background: url('./images/mainsea2.jpg') no-repeat;
     background-size: cover;
@@ -278,77 +280,7 @@ nav {
        border-bottom: solid 2px white;
    }
 
-   .gal-grid {
-       display: grid;
-       grid-template-columns: repeat(3, 1fr);
-       grid-template-rows: repeat(5, 1fr);
-       justify-content: space-around;
-       grid-gap: 10px;
-   }
-   .grid-itm {
-    height: auto;
-    width: 100px;
-    cursor: pointer;
-}
-
-@media screen and (max-width: 500px) {
-   .grid-itm {
-       width: 50px;
-   }
-}
-
-.key-symbol {
-    text-align: center;
-}
-
-.lrg-img {
-    height: auto;
-    width: 40vw;
-    position: absolute;
-    left: 1px;
-    border: solid 3px black;
-}
-
-   .sec {
-    display: none;
-   }
-
-   .close {
-    display: none;
-   }
-   .styledClose {
-    border: none;
-    position: sticky;
-    top: 400px;
-    background: white;
-    color: darkturquoise;
-    height: 30px;
-    width: 30px;
-    border: solid 3px darkturquoise;
-    cursor: pointer;
-    transform: translateY(-300px);
-    margin-left: 60%;
-   }
-   @media screen and (max-width: 800px) {
-    .stlyedClose {
-        top: 300px;
-    }
-   }
-   @keyframes showItem {
-    from {
-     opacity: 0;
-    }
-    to {
-     opacity: 1;
-    }
-   }
-   .show {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-around;
-    animation: showItem 3s ease;
-   }
+   
    
    @keyframes galSlide {
        from{
@@ -356,7 +288,7 @@ nav {
         opacity: 1;
        }
        to {
-        transform: translateX(-50%);
+        transform: translateX(-20%);
         opacity: 0;
        }
    }
@@ -376,38 +308,107 @@ nav {
    .gallery-wrap {
        display: grid;
        grid-template-columns: 1fr 2fr 1fr;
-       justify-content: space-around;
        margin: 0 auto;
-       width: 100vw;
+       justify-content: space-around;
+       width: 400px;
        max-width: 1000px;
    }
- 
+
+   .close {
+    display: none;
+    position: sticky;
+    top: 400px;
+   }
+
+   .styledClose {
+    display: block;
+    background: white;
+    color: darkturquoise;
+    height: 30px;
+    width: 30px;
+    border: solid 3px darkturquoise;
+    margin: 10px;
+    transform: translateY(-300px);
+   }
 
    .gallery-sections {
-       display: flex;
-       flex-flow: column;
-       justify-content: space-around;
-       margin: 0 auto;
-       height: auto;
-       width: 90%;
-       transform: translateY(-300px);
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    margin: 0 auto;
+    height: auto;
+    width: 90%;
+    transform: translateY(-300px);
+}
+
+.gal-sec {
+    display: none;
+}
+
+   .gal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    justify-content: space-around;
+    grid-gap: 10px;
+}
+    .grid-itm {
+    height: auto;
+    width: 100px;
+    cursor: pointer;
+    }
+
+
+@media screen and (max-width: 500px) {
+    .grid-itm {
+        width: 75px;
+    }
+}
+
+@keyframes showItem {
+    from {
+     opacity: 0;
+    }
+    to {
+     opacity: 1;
+    }
    }
+   .show {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    animation: showItem .5s ease;
+   }
+
+
+.lrg-img {
+ height: auto;
+ width: 40vw;
+ position: absolute;
+ left: 1px;
+ border: solid 3px black;
+}
+
+ 
 
    #contact {
        margin-top: 150px;
    }
-   .contact-wrap {
-       display: flex;
-       justify-content: space-around;
-   }
    .contact-info {
        display: flex;
        flex-flow: column;
-       align-items: center;
        justify-content: space-around;
        border: solid 3px darkturquoise;
        border-left: solid 30px darkturquoise;
        height: 500px; 
        width: 300px;
-       margin: 50px 0 50px 0;
+       margin: 0 auto;
+       margin-top: 50px;
+       margin-bottom: 50px;
+       padding-left: 20px;
+   }
+   .email, .number {
+       text-decoration: none;
+       color: darkturquoise;
    }

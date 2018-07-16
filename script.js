@@ -1,7 +1,6 @@
 // Gallery selectors
 const gallery = document.querySelector('.gallery-box');
 const close = document.querySelector('.close');
-const sec = document.querySelectorAll('.sec');
 
 
 // info selectors
@@ -12,7 +11,6 @@ const partial = document.querySelectorAll('.partial');
 
 // gallery image selector
 const gridItem = document.querySelectorAll('.grid-itm');
-const galBleh = document.querySelector('.gal-bleh');
 
 // toggling view mode for info
 info.forEach(item => {
@@ -20,10 +18,8 @@ info.forEach(item => {
         partial.forEach(img => {
             img.classList.toggle('lrg-partial');
         })
-
             item.classList.toggle('view-info');
             item.scrollTo({ top: 0 });
-            
     })
 })
 
@@ -32,18 +28,18 @@ info.forEach(item => {
 galItem.forEach((item, index) => {
     item.addEventListener('click', () => {
         this.index = index;
-        close.classList.add('show');
+       // close.classList.add('show');
         close.classList.add('styledClose');
         gallery.classList.add('galSlide');
         gallery.classList.remove('slideBack');
         // open sections
             galSec.forEach((section, index) => {
-                if(this.index == index) {
-                    section.classList.add('show');
+                    if(this.index == index) {
+                        section.classList.add('show');
                 }
-            })
-        });
-    });
+        })
+    })
+})
 
 // close sections
 close.addEventListener('click', () => {
@@ -52,7 +48,7 @@ close.addEventListener('click', () => {
  close.classList.remove('styledClose');
  gallery.classList.remove('galSlide');
  gallery.classList.add('slideBack');
- sec.forEach(section => {
+ galSec.forEach(section => {
      section.classList.remove('show');
     })
 })
@@ -62,5 +58,4 @@ gridItem.forEach(item => {
     item.addEventListener('click', () => {
         item.classList.toggle('lrg-img');
     })
-    
 })
