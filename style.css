@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 @import url('https://fonts.googleapis.com/css?family=Philosopher');
 
+
 * {
     margin: 0;
     padding: 0;
+    font-size: 1em;
 }
 
 body {
  font-family: 'Varela Round', sans-serif;
  max-width: 1000px;
+ height: 100%;
  margin: 0;
  padding: 0;
  margin: 0 auto;
@@ -16,6 +19,7 @@ body {
 
 .title {
     margin-left: 5%;
+    font-size: 2em;
 }
 
 
@@ -36,6 +40,7 @@ body {
  justify-content: space-around;
  height: 100vh; 
  min-height: 600px;
+ margin-bottom: 150px;
 }
 .header-title {
     font-family: 'Philosopher', sans-serif;
@@ -43,31 +48,48 @@ body {
     justify-content: space-around;
     flex-flow: column;
     align-items: center;
-    font-size: 1.25em;
+    font-size: 1.5em;
     background: darkturquoise;
     border: solid 2px white;
-    padding: 20px;
+    padding: 5%;
+    width: 80%;
     mix-blend-mode: hard-light;
 }
-.header-extra {
+.header-title2 {
     display: flex;
     flex-flow: row;
     justify-content: space-around;
 }
-@media screen and (max-width: 600px) {
-    .header-title {
-        font-size: .60em;
-    }
+.name {
+    margin: 10px;
 }
-header h4:before,
-header h4:after {
+
+
+.header-extra {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background: white;
+    width: 80%;
+    height: 40%;
+    color: darkturquoise;
+    mix-blend-mode: hard-light;
+    justify-content: space-around;
+    padding: 0 5% 0 5%;
+}
+.header-extra h1 {
+    margin: 0 auto;
+    font-size: 2em;
+}
+.header-extra h4:before,
+.header-extra h4:after {
     display: flex;
     flex-flow: row;
     align-items: center;
     content: '';
     width: 100%;
     height: 2px;
-    background: white;
+    background: darkturquoise;
 }
 
 
@@ -78,8 +100,8 @@ header {
  align-items: center;
  justify-content: space-around;
  background: url('./images/mainsea.jpg');
- height: 75%;
- width: 75%;
+ height: 85%;
+ width: 85%;
  max-width: 1000px;
  background-size: cover;
  background-repeat: no-repeat;
@@ -96,6 +118,7 @@ header {
 }
 .name {
     letter-spacing: 10px;
+    font-size: 1.5em;
 }
 
 
@@ -104,10 +127,14 @@ nav {
  flex-flow: row;
  justify-content: space-between;
  width: 80%;
+ padding-left: 10%;
+ padding-right: 10%;
  text-align: center;
+ background: darkturquoise;
+ mix-blend-mode: hard-light;
 }
 .nav-item {
- margin: 0px 5px 0px 5px;
+ margin: 0px 10px 0px 10px;
  text-decoration: none;
  color: white;
  font-size: 1.5em;
@@ -117,15 +144,30 @@ nav {
     text-decoration: underline;
 }
 
-
-.view-wrap {
+.self {
     display: flex;
-    flex-flow: row;
-    width: 90vw;
-    margin-top: 5%;
-    margin-bottom: -2%;
-    padding: 0;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 40%;
+    margin-bottom: 50px;
 }
+.self img {
+    height: 40%;
+    width: 30%;
+    min-height: 300px;
+    min-width: 250px;
+    box-shadow: 5px 5px 1px darkturquoise;
+    margin: 0 auto;
+}
+@media screen and (max-width: 700px) {
+    .self img {
+        min-height: 200px;
+        min-width: 150px;
+    }
+}
+
+
+
 .view-text {
     margin-left: 30px;
     font-size: 1.2em;
@@ -154,6 +196,7 @@ nav {
 .info {
     min-width: 60px;
     width: 200px;
+    max-height: 400px;
     overflow: hidden;
     cursor: pointer;
     margin-top: 30px;
@@ -165,14 +208,14 @@ nav {
 .view-info {
     overflow-y: scroll;
     position: absolute;
-    top: 680px;
+    top: 1050px;
     right: 1px;
     margin: 0 auto;
-    padding: 0px 15% 0px 15%;
     background: white;
     font-size: 3em;
-    height: 420px;
-    min-width: 70vw;
+    height: 80%;
+    width: 80%;
+    padding: 10%;
 }
 
 .partial {
@@ -200,6 +243,7 @@ nav {
 
 .text-head {
  text-align: center; 
+ font-size: 1.75em;
 }
 
 .text-wrap {
@@ -317,6 +361,7 @@ nav {
    .close {
     display: none;
     position: sticky;
+    position: -webkit-sticky;
     top: 400px;
    }
 
@@ -343,6 +388,10 @@ nav {
 
 .gal-sec {
     display: none;
+}
+.gal-sec:after {
+    content: 'end';
+    border-bottom: solid 3px darkturquoise;
 }
 
    .gal-grid {
@@ -411,4 +460,7 @@ nav {
    .email, .number {
        text-decoration: none;
        color: darkturquoise;
+   }
+   .contact-moved {
+       transform: translateY(-300px);
    }

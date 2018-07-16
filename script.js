@@ -1,6 +1,7 @@
 // Gallery selectors
 const gallery = document.querySelector('.gallery-box');
 const close = document.querySelector('.close');
+const contact = document.querySelector('.contact-wrap');
 
 
 // info selectors
@@ -28,10 +29,10 @@ info.forEach(item => {
 galItem.forEach((item, index) => {
     item.addEventListener('click', () => {
         this.index = index;
-       // close.classList.add('show');
         close.classList.add('styledClose');
         gallery.classList.add('galSlide');
         gallery.classList.remove('slideBack');
+        contact.classList.add('contact-moved');
         // open sections
             galSec.forEach((section, index) => {
                     if(this.index == index) {
@@ -44,10 +45,10 @@ galItem.forEach((item, index) => {
 // close sections
 close.addEventListener('click', () => {
  gallery.scrollIntoView({ behavior: 'smooth' });
- close.classList.remove('show');
  close.classList.remove('styledClose');
  gallery.classList.remove('galSlide');
  gallery.classList.add('slideBack');
+ contact.classList.remove('contact-moved');
  galSec.forEach(section => {
      section.classList.remove('show');
     })
