@@ -173,14 +173,6 @@ nav {
     font-size: 1.2em;
 }
 
-.open-info {
-    height: 20px;
-    width: 20px;
-}
-.close-info {
-    transform: rotate(180deg);
-}
-
 .info-wrap {
     display: flex;
     flex-flow: row;
@@ -207,19 +199,19 @@ nav {
 .view-info {
     overflow-y: scroll;
     position: absolute;
-    top: calc(100vh + 500px);
+    top: calc(900px + 40%);
     right: 1px;
     margin: 0 auto;
     background: white;
     font-size: 3em;
-    padding: 10px 10% 0% 10%;
+    padding: 10px 10% 50px 10%;
     width: 80%;
     border-top: solid darkturquoise 2px;
     border-bottom: solid darkturquoise 2px;
 }
 @media screen and (min-width: 700px) {
     .view-info {
-        top: calc(100vh + 600px);
+        top: calc(1000px + 40%);
     }
 }
 
