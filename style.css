@@ -38,9 +38,9 @@ body {
  flex-flow: column;
  align-items: center;
  justify-content: space-around;
- height: 100vh; 
+ height: 600px; 
  min-height: 600px;
- margin-bottom: 150px;
+ margin-bottom: 30%;
 }
 .header-title {
     font-family: 'Philosopher', sans-serif;
@@ -212,9 +212,11 @@ nav {
     margin: 0 auto;
     background: white;
     font-size: 3em;
-    height: 80%;
+    height: 900px;
     width: 80%;
-    padding: 5% 10% 5% 10%;
+    padding: 0% 10% 100px 10%;
+    border-top: solid darkturquoise 2px;
+    border-bottom: solid darkturquoise 2px;
 }
 @media screen and (min-width: 700px) {
     .view-info {
