@@ -39,6 +39,7 @@ body {
  align-items: center;
  justify-content: space-around;
  height: 600px; 
+ min-height: 600px;
  margin-bottom: 300px;
 }
 .header-title {
@@ -199,7 +200,7 @@ nav {
 .view-info {
     overflow-y: scroll;
     position: absolute;
-    top: calc(900px + 40%);
+    top: 1200px;
     right: 1px;
     margin: 0 auto;
     background: white;
@@ -211,7 +212,7 @@ nav {
 }
 @media screen and (min-width: 700px) {
     .view-info {
-        top: calc(1000px + 40%);
+        top: 1300px;
     }
 }
 
