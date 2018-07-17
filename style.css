@@ -39,8 +39,7 @@ body {
  align-items: center;
  justify-content: space-around;
  height: 600px; 
- min-height: 600px;
- margin-bottom: 30%;
+ margin-bottom: 300px;
 }
 .header-title {
     font-family: 'Philosopher', sans-serif;
@@ -52,6 +51,7 @@ body {
     background: darkturquoise;
     border: solid 2px white;
     padding: 5%;
+    min-height: 150px;
     width: 80%;
     mix-blend-mode: hard-light;
 }
@@ -207,20 +207,19 @@ nav {
 .view-info {
     overflow-y: scroll;
     position: absolute;
-    top: 1050px;
+    top: calc(100vh + 500px);
     right: 1px;
     margin: 0 auto;
     background: white;
     font-size: 3em;
-    height: 900px;
+    padding: 10px 10% 0% 10%;
     width: 80%;
-    padding: 0% 10% 100px 10%;
     border-top: solid darkturquoise 2px;
     border-bottom: solid darkturquoise 2px;
 }
 @media screen and (min-width: 700px) {
     .view-info {
-        top: 1150px;
+        top: calc(100vh + 600px);
     }
 }
 
