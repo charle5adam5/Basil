@@ -259,7 +259,9 @@ nav {
 
 
 /* Gallery style */
-
+.note {
+    margin-left: 5%;
+}
 #gallery {
     margin-top: 150px;
 }
