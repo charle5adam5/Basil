@@ -193,6 +193,7 @@ nav {
     background: white;
     font-size: 3em;
     padding: 10px 10% 50px 10%;
+    min-height: 400px;
     width: 80%;
     border-top: solid darkturquoise 2px;
     border-bottom: solid darkturquoise 2px;
