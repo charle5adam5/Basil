@@ -41,7 +41,9 @@ body {
  justify-content: space-around;
  height: 600px; 
  min-height: 600px;
+ margin: 0 auto;
  margin-bottom: 300px;
+
 }
 .header-title {
     font-family: 'Philosopher', sans-serif;
@@ -283,6 +285,7 @@ nav {
     background-size: cover;
     color: white;
     max-width: 1200px;
+    margin: 0 auto;
 }
 
    .gallery-items {
