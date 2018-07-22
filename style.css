@@ -34,8 +34,7 @@ body {
     }
    }
    .fadeIn {
-    animation: fadeIn 2s ease;
-    animation-fill-mode: forwards;
+
    }
 .header-box {
  display: flex;
@@ -73,7 +72,6 @@ body {
     display: flex;
     flex-flow: column;
     align-items: center;
-    /* background: RGBA(255, 255, 255, .5); */
     width: 400px;
     height: 200px;
     color: white;
@@ -98,7 +96,8 @@ header {
  background-size: cover;
  background-repeat: no-repeat;
  box-shadow: 5px 5px 1px darkturquoise;
- visibility: hidden;
+ animation: fadeIn 2s ease;
+ animation-fill-mode: forwards;
  color: white;
 }
 

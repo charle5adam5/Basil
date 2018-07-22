@@ -12,18 +12,7 @@ const partial = document.querySelectorAll('.partial');
 
 // gallery image selector
 const gridItem = document.querySelectorAll('.grid-itm');
-const header = document.querySelector('header');
-
-let seaImage = new Image();
-seaImage.src = './images/mainSea.jpg';
-seaImage.onload = () => {
-    header.background = "url('./images/mainSea.jpg')";
-    header.classList.add('fadeIn');
-    header.style.visibility = 'visible';
-}
-  
-
-    
+ 
 
 // toggling view mode for info
 info.forEach(item => {
