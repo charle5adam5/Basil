@@ -16,11 +16,12 @@ const header = document.querySelector('header');
 
 let seaImage = new Image();
 seaImage.src = './images/mainSea.jpg';
-seaImage.onload(
-    header.background = "url('./images/mainSea.jpg')",
-    header.classList.add('fadeIn'),
-    header.style.visibility = 'visible'
-);
+seaImage.onload = () => {
+    header.background = "url('./images/mainSea.jpg')";
+    header.classList.add('fadeIn');
+    header.style.visibility = 'visible';
+}
+  
 
     
 
