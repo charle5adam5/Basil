@@ -10,7 +10,7 @@
 
 body {
  font-family: 'Varela Round', sans-serif;
- max-width: 1200px;
+ max-width: 1000px;
  height: 100%;
  margin: 0;
  padding: 0;
@@ -32,6 +32,10 @@ body {
      opacity: 1;
      transform: translateY(0%);
     }
+   }
+   .fadeIn {
+    animation: fadeIn 2s ease;
+    animation-fill-mode: forwards;
    }
 .header-box {
  display: flex;
@@ -94,8 +98,7 @@ header {
  background-size: cover;
  background-repeat: no-repeat;
  box-shadow: 5px 5px 1px darkturquoise;
- animation: fadeIn 2s ease;
- animation-fill-mode: forwards;
+ visibility: hidden;
  color: white;
 }
 
@@ -179,9 +182,6 @@ nav {
     max-height: 400px;
     overflow: hidden;
     cursor: pointer;
-}
-.info:hover:before{
-    content: '\25E5';
 }
 
 .view-info {
