@@ -19,7 +19,7 @@ bckgrndImg.onload = () => {
     header.style.visibility = 'visible';
     header.classList.add('fadeIn');
 }
-bckgrndImg.src = './images/mainSea.jpg';
+bckgrndImg.src = './images/mainsea.jpg';
 
 // toggling view mode for info
 info.forEach(item => {
