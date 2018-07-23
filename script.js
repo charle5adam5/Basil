@@ -13,6 +13,13 @@ const partial = document.querySelectorAll('.partial');
 // gallery image selector
 const gridItem = document.querySelectorAll('.grid-itm');
  
+let header = document.querySelector('.header');
+let bckgrndImg = new Image();
+bckgrndImg.onload = () => {
+    header.style.visibility = 'visible';
+    header.classList.add('fadeIn');
+}
+bckgrndImg.src = './images/mainSea.jpg';
 
 // toggling view mode for info
 info.forEach(item => {
