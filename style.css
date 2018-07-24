@@ -10,7 +10,8 @@
 
 body {
  font-family: 'Varela Round', sans-serif;
- max-width: 1000px;
+ width: 100%;
+ max-width: 1200px;
  height: 100%;
  margin: 0 auto;
 }
@@ -192,7 +193,8 @@ nav {
     background: white;
     font-size: 3em;
     padding: 10px 10% 50px 10%;
-    min-height: 400px;
+    height: 400px;
+    max-height: 400px;
     width: 80%;
     border-top: solid darkturquoise 2px;
     border-bottom: solid darkturquoise 2px;
@@ -218,6 +220,13 @@ nav {
 .lrg-partial {
     height: 100px;
     width: 100px;
+    border-radius: 100%;
+    shape-outside: circle(50%);
+    float: left;
+    margin: 10px;
+}
+.lrg-partial:nth-child(2n) {
+    float: right;
 }
 @media screen and (min-width: 700px) {
     .lrg-partial {
@@ -336,6 +345,11 @@ nav {
     transform: translate(0vmax, 0vmax);
     transition: transform 1s ease;
     animation-fill-mode: forwards;
+    background: url('./images/mainsea2.jpg') no-repeat;
+    background-size: cover;
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
    }
 
    .gallery-wrap {
@@ -349,9 +363,6 @@ nav {
 
    .close {
     display: none;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 400px;
    }
 
    .styledClose {
@@ -363,6 +374,9 @@ nav {
     border: solid 3px darkturquoise;
     margin: 10px;
     transform: translateY(-300px);
+    position: sticky;
+    position: -webkit-sticky;
+    top: 400px;
    }
 
    .gallery-sections {
@@ -378,10 +392,7 @@ nav {
 .gal-sec {
     display: none;
 }
-.gal-sec:after {
-    content: 'end';
-    border-bottom: solid 3px darkturquoise;
-}
+
 
    .gal-grid {
     display: grid;
@@ -418,6 +429,10 @@ nav {
     justify-content: space-around;
     animation: showItem .5s ease;
    }
+   .show:after {
+    content: 'end';
+    border-bottom: solid 3px darkturquoise;
+}
 
 
 .lrg-img {

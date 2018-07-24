@@ -17,34 +17,63 @@ let header = document.querySelector('.header');
 let bckgrndImg = new Image();
 bckgrndImg.onload = () => {
     header.style.visibility = 'visible';
-    header.classList.add('fadeIn');
+    header.className = 'fadeIn';
 }
 bckgrndImg.src = './images/mainsea.jpg';
 
 // toggling view mode for info
 info.forEach(item => {
     item.addEventListener('click', () => {
+        item.scrollTo({ top: 0 });
         partial.forEach(img => {
-            img.classList.toggle('lrg-partial');
+            if(img.className === 'lrg-partial') {
+                img.className = 'partial';
+            } else {
+                img.className = 'lrg-partial';
+            }
+            // img.classList.toggle('lrg-partial');
+       
         })
-            item.classList.toggle('view-info');
-            item.scrollTo({ top: 0 });
+            if(item.className === 'view-info') {
+                item.className = 'info';
+            } else {
+                item.className = 'view-info';
+            }
+            // item.classList.toggle('view-info');
+            
     })
 })
 
+
+// // open items
+// galItem.forEach((item, index) => {
+//     item.addEventListener('click', () => {
+//         this.index = index;
+//         close.classList.add('styledClose');
+//         gallery.classList.add('galSlide');
+//         gallery.classList.remove('slideBack');
+//         contact.classList.add('contact-moved');
+//         // open sections
+//             galSec.forEach((section, index) => {
+//                     if(this.index == index) {
+//                         section.classList.add('show');
+//                 }
+//         })
+//     })
+// })
 
 // open items
 galItem.forEach((item, index) => {
     item.addEventListener('click', () => {
         this.index = index;
-        close.classList.add('styledClose');
-        gallery.classList.add('galSlide');
-        gallery.classList.remove('slideBack');
-        contact.classList.add('contact-moved');
+        close.className = 'styledClose';
+        gallery.className = gallery.className.replace(/slideBack/gi, '');
+        gallery.className = 'galSlide';
+        contact.className = 'contact-moved';
         // open sections
             galSec.forEach((section, index) => {
                     if(this.index == index) {
-                        section.classList.add('show');
+                        section.className = 'show';
                 }
         })
     })
@@ -53,18 +82,22 @@ galItem.forEach((item, index) => {
 // close sections
 close.addEventListener('click', () => {
  gallery.scrollIntoView({ behavior: 'smooth' });
- close.classList.remove('styledClose');
- gallery.classList.remove('galSlide');
- gallery.classList.add('slideBack');
- contact.classList.remove('contact-moved');
+ close.className = close.className.replace(/styledClose/gi, '');
+ close.className = 'close';
+ gallery.className = gallery.className.replace(/galSlide/gi, 'slideBack');
+ contact.className = contact.className.replace(/contact-moved/gi, '');
  galSec.forEach(section => {
-     section.classList.remove('show');
+    section.className = section.className.replace(/show/gi, 'gal-sec');
     })
 })
 
 // expand images
 gridItem.forEach(item => {
     item.addEventListener('click', () => {
-        item.classList.toggle('lrg-img');
+        if(item.className != 'lrg-img') {
+            item.className = 'lrg-img';
+        } else {
+            item.className = 'grid-itm';
+        }
     })
 })
