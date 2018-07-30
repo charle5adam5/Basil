@@ -430,7 +430,8 @@ nav {
     animation: showItem .5s ease;
    }
    .show:after {
-    content: 'end';
+    content: '';
+    width: 100%;
     border-bottom: solid 3px darkturquoise;
 }
 
