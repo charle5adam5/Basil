@@ -15,69 +15,88 @@ const gridItem = document.querySelectorAll('.grid-itm');
  
 let header = document.querySelector('.header');
 let bckgrndImg = new Image();
-bckgrndImg.onload = () => {
+bckgrndImg.addEventListener('load', function() {
     header.style.visibility = 'visible';
     header.className = 'fadeIn';
-}
+})
 bckgrndImg.src = './images/mainsea.jpg';
 
 // toggling view mode for info
-info.forEach(item => {
-    item.addEventListener('click', () => {
-        item.scrollTo({ top: 0 });
-        partial.forEach(img => {
-            if(img.className === 'lrg-partial') {
-                img.className = 'partial';
-            } else {
-                img.className = 'lrg-partial';
-            }
-            // img.classList.toggle('lrg-partial');
-       
-        })
-            if(item.className === 'view-info') {
-                item.className = 'info';
-            } else {
-                item.className = 'view-info';
-            }
-            // item.classList.toggle('view-info');
-            
-    })
-})
+for (let i = 0; i < info.length; i ++) {
+    info[i].addEventListener('click', () => {
+        info[i].scrollTo({ top: 0 });
+            for(let j = 0; j < partial.length; j++) {
+                if(partial[j].className === 'lrg-partial') {
+                    partial[j].className = 'partial';
+                } else {
+                    partial[j].className = 'lrg-partial';
+                }
+            };
+                if(info[i].className === 'view-info') {
+                    info[i].className = 'info';
+                } else {
+                    info[i].className = 'view-info';
+                }
+            })       
+}
 
-
-// // open items
-// galItem.forEach((item, index) => {
+// info.forEach(item => {
 //     item.addEventListener('click', () => {
-//         this.index = index;
-//         close.classList.add('styledClose');
-//         gallery.classList.add('galSlide');
-//         gallery.classList.remove('slideBack');
-//         contact.classList.add('contact-moved');
-//         // open sections
-//             galSec.forEach((section, index) => {
-//                     if(this.index == index) {
-//                         section.classList.add('show');
-//                 }
+//         item.scrollTo({ top: 0 });
+//         partial.forEach(img => {
+//             if(img.className === 'lrg-partial') {
+//                 img.className = 'partial';
+//             } else {
+//                 img.className = 'lrg-partial';
+//             }
+//             // img.classList.toggle('lrg-partial');
+       
 //         })
+//             if(item.className === 'view-info') {
+//                 item.className = 'info';
+//             } else {
+//                 item.className = 'view-info';
+//             }
+//             // item.classList.toggle('view-info');
+            
 //     })
 // })
 
+
+
 // open items
-galItem.forEach((item, index) => {
-    item.addEventListener('click', () => {
-        this.index = index;
+for (let i = 0; i < galItem.length; i++) {
+    galItem[i].addEventListener('click', () => {
         close.className = 'styledClose';
         gallery.className = gallery.className.replace(/slideBack/gi, '');
         gallery.className = 'galSlide';
         contact.className = 'contact-moved';
         // open sections
-            galSec.forEach((section, index) => {
-                    if(this.index == index) {
-                        section.className = 'show';
-                }
-        })
+        for(let j = 0; j < galSec.length; j++) {
+            if(i == j) {
+                galSec[i].className = 'show';
+            }
+        }
+                        
     })
-})
+}
+
+// old ie hates .forEach
+// galItem.forEach((item, index) => {
+//     item.addEventListener('click', () => {
+//         this.index = index;
+//         close.className = 'styledClose';
+//         gallery.className = gallery.className.replace(/slideBack/gi, '');
+//         gallery.className = 'galSlide';
+//         contact.className = 'contact-moved';
+//         // open sections
+//             galSec.forEach((section, index) => {
+//                     if(this.index == index) {
+//                         section.className = 'show';
+//                 }
+//         })
+//     })
+// })
 
 // close sections
 close.addEventListener('click', () => {
@@ -92,12 +111,22 @@ close.addEventListener('click', () => {
 })
 
 // expand images
-gridItem.forEach(item => {
-    item.addEventListener('click', () => {
-        if(item.className != 'lrg-img') {
-            item.className = 'lrg-img';
+for(let i = 0; i < gridItem.length; i++) {
+    gridItem[i].addEventListener('click', function() {
+        if(gridItem[i].className != 'lrg-img') {
+            gridItem[i].className = 'lrg-img';
         } else {
-            item.className = 'grid-itm';
+            gridItem[i].className = 'grid-itm';
         }
     })
-})
+}
+
+// gridItem.forEach(item => {
+//     item.addEventListener('click', () => {
+//         if(item.className != 'lrg-img') {
+//             item.className = 'lrg-img';
+//         } else {
+//             item.className = 'grid-itm';
+//         }
+//     })
+// })

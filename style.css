@@ -121,7 +121,7 @@ nav {
  padding-left: 10%;
  padding-right: 10%;
  text-align: center;
- background: darkturquoise;
+ background: RGBA(0, 206, 209, .5);
  mix-blend-mode: hard-light;
 }
 .nav-item {
@@ -305,7 +305,7 @@ nav {
     justify-content: space-around;
     min-height: 300px;
     width: 100%;
-    background: darkturquoise;
+    background: RGBA(0, 206, 209, .5);;
     padding-top: 20px;
     mix-blend-mode: hard-light;
    }
