@@ -295,6 +295,7 @@ nav {
     color: white;
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 20px;
 }
 
    .gallery-items {
@@ -441,7 +442,7 @@ nav {
  width: 40vw;
  position: absolute;
  left: 1px;
- border: solid 3px black;
+ border: solid 3px white;
 }
 
  
