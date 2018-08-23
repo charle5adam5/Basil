@@ -496,3 +496,14 @@ nav {
    .contact-moved {
        transform: translateY(-300px);
    }
+
+   .seo-wrap {
+       max-width: 100%;
+   }
+   .seo.content {
+       color: white;
+       font-size: 1px;
+   }
+   .seo-content > a {
+    color: white;
+   }
