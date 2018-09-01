@@ -186,7 +186,13 @@ nav {
     width: 200px;
     max-height: 400px;
     overflow: hidden;
+}
+.read {
     cursor: pointer;
+    border-radius: 10%;
+    padding: 5px;
+    color: darkturquoise;
+    font-size: 1.5em;
 }
 
 .view-info {
@@ -215,11 +221,7 @@ nav {
     width: 20px;
     border-radius: 100%;
     shape-outside: circle(50%);
-    float: left;
     margin: 10px;
-}
-.partial:nth-child(2n) {
-    float: right;
 }
 
 .lrg-partial {
@@ -227,12 +229,10 @@ nav {
     width: 100px;
     border-radius: 100%;
     shape-outside: circle(50%);
-    float: left;
     margin: 10px;
 }
-.lrg-partial:nth-child(2n) {
-    float: right;
-}
+
+
 @media screen and (min-width: 700px) {
     .lrg-partial {
         height: 150px;
@@ -243,6 +243,8 @@ nav {
 .text-head {
  text-align: center; 
  font-size: 1.75em;
+ margin: 0 auto;
+ padding: 10px;
 }
 
 .text-wrap {
@@ -324,11 +326,7 @@ nav {
     background: RGBA(0, 236, 239, .8);
     padding-top: 20px;
    }
-   /* @media screen and (min-width: 800px) {
-       .gallery-items {
-           flex-flow: row;
-       }
-   } */
+
    .gal-item {
     padding: 0 1%;
     width: 250px;
@@ -354,13 +352,13 @@ nav {
         opacity: 1;
        }
        to {
-        transform: translateX(-20%);
+        transform: translateX(-110vw);
         opacity: 0;
        }
    }
    .galSlide {
     margin: 0 auto;
-    animation: galSlide .5s ease;
+    animation: galSlide 1s ease;
     animation-fill-mode: forwards;
     transform: preserve-3d;
    }
@@ -372,7 +370,6 @@ nav {
     background: url('./images/mainsea2.jpg') no-repeat;
     background-size: cover;
     color: white;
-    min-width: 80px;
     max-width: 800px;
     margin: 0 auto;
     margin-top: 20px;
@@ -384,7 +381,6 @@ nav {
        margin: 0 auto;
        justify-content: space-around;
        width: 400px;
-       min-width: 10px;
        max-width: 1000px;
    }
 
@@ -396,24 +392,20 @@ nav {
     display: block;
     background: white;
     color: darkturquoise;
-    height: 30px;
-    width: 30px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
     border: solid 3px darkturquoise;
     margin: 10px;
-    transform: translateY(-300px);
+    transform: translateY(-500px);
     position: sticky;
     position: -webkit-sticky;
     top: 400px;
+    font-size: .75em;
    }
 
    .gallery-sections {
-    display: flex;
-    flex-flow: column;
-    justify-content: space-around;
-    margin: 0 auto;
-    height: auto;
-    width: 90%;
-    transform: translateY(-300px);
+    transform: translateY(-500px);
 }
 
 .gal-sec {
@@ -422,17 +414,33 @@ nav {
 
 
    .gal-grid {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 1fr);
     justify-content: space-around;
     grid-gap: 10px;
 }
+.grid-sec {
+    display: grid;
+    grid-template-rows: 3fr 1fr 1fr;
+    align-items: center;
+    height: 250px;
+    width: 100px;
+}
+
     .grid-itm {
     height: auto;
-    width: 100px;
-    cursor: pointer;
-    }
+    width: auto;
+    max-width: 100px;
+}
+
+.view-style {
+    color: darkturquoise;
+    border: solid 2px darkturquoise;
+}
+
+
 
 
 @media screen and (max-width: 500px) {
@@ -441,7 +449,25 @@ nav {
     }
 }
 
-@keyframes showItem {
+.lrg-sec {
+    display: grid;
+    grid-template-rows: 3fr 1fr 1fr;
+    align-items: center;
+    justify-content: space-around;
+    height: 40vw;
+    width: auto;
+    padding: 20px;
+    border: solid 3px white;
+    background: GAINSBORO;
+    position: absolute;
+    visibility: visible;
+}
+.lrg-img {
+    height: 40vw;
+    width: auto;
+   }
+
+   @keyframes showItem {
     from {
      opacity: 0;
     }
@@ -461,16 +487,6 @@ nav {
     width: 100%;
     border-bottom: solid 3px darkturquoise;
 }
-
-
-.lrg-img {
- height: auto;
- width: 40vw;
- position: absolute;
- left: 1px;
- border: solid 3px white;
-}
-
  
 
    #contact {
