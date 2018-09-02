@@ -160,14 +160,6 @@ nav {
     }
 }
 
-
-
-.view-text {
-    margin-left: 5%;
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
 .info-wrap {
     display: flex;
     flex-flow: row;
@@ -178,19 +170,20 @@ nav {
     max-width: 900px;
     overflow-x: scroll;
     overflow: hidden;
-    padding: 0 50px;
+    padding: 0 30px;
 }
 
 .info {
     min-width: 60px;
-    width: 200px;
+    width: 300px;
     max-height: 400px;
     overflow: hidden;
 }
 .read {
     cursor: pointer;
-    border-radius: 10%;
+    border: solid 2px darkturquoise;
     padding: 5px;
+    background: white;
     color: darkturquoise;
     font-size: 1.5em;
 }
@@ -199,7 +192,7 @@ nav {
     overflow-y: scroll;
     position: absolute;
     top: 1200px;
-    right: 1px;
+    left: 1px;
     margin: 0 auto;
     background: white;
     font-size: 3em;
@@ -217,40 +210,35 @@ nav {
 }
 
 .partial {
-    height: 20px;
-    width: 20px;
+    height: 2vmax;
+    width: 2vmax;
+    max-height: 200px;
+    max-width: 200px;
     border-radius: 100%;
     shape-outside: circle(50%);
     margin: 10px;
 }
-
-.lrg-partial {
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
-    shape-outside: circle(50%);
-    margin: 10px;
+.left {
+    float: left;
+}
+.right {
+    float: right;
 }
 
-
-@media screen and (min-width: 700px) {
-    .lrg-partial {
-        height: 150px;
-        width: 150px;
-    }
-}
 
 .text-head {
+ display: flex;
+ flex-flow: column;
  text-align: center; 
  font-size: 1.75em;
  margin: 0 auto;
- padding: 10px;
 }
 
 .text-wrap {
  border-top: solid 3px darkturquoise;
  border-left: solid 2px darkturquoise;
  padding-top: 1%;
+ clear: both;
 }
 .text-wrap p {
  margin: 5px 0px 0px 10px;
@@ -436,6 +424,7 @@ nav {
 }
 
 .view-style {
+    background: white;
     color: darkturquoise;
     border: solid 2px darkturquoise;
 }

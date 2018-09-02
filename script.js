@@ -36,11 +36,14 @@ for (let i = 0, j = 0; i < info.length, j < read.length; i ++, j++) {
                     info[i].setAttribute("class", "info");
                 }
                 for(let i = 0; i < partial.length; i++) {
-                    if(partial[i].className !== 'lrg-partial') {
-                        partial[i].setAttribute("class", "lrg-partial");
+                    if(partial[i].style.height != '15vmax' && partial[i].style.width != '15vmax') {
+                        partial[i].style.height = '15vmax';
+                        partial[i].style.width = '15vmax';
                     } else {
-                        partial[i].setAttribute("class", "partial");
+                        partial[i].style.height = '2vmax';
+                        partial[i].style.width = '2vmax';
                     }
+                        
                 }
             })       
 }
