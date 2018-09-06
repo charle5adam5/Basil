@@ -10,15 +10,11 @@
 
 body {
  font-family: 'Varela Round', sans-serif;
- width: 100%;
  max-width: 1200px;
  height: 100%;
  margin: 0 auto;
 }
 
-#big-box {
-    margin: 0 auto;
-}
 
 .title {
     margin-left: 5%;
@@ -57,35 +53,69 @@ body {
     justify-content: space-around;
     flex-flow: column;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 2em;
+    text-align: center;
     background: RGBA(0, 206, 209, .5);
     padding: 5%;
     min-height: 150px;
     width: 80%;
+    line-height: 50px;
 }
-.header-title2 {
+
+.logo {
+    border: solid 5px white;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.name {
+    letter-spacing: 10px;
+    padding: 5px;
+}
+
+nav {
     display: flex;
     flex-flow: row;
-    justify-content: space-around;
-}
-.name {
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 50px;
+    min-height: 50px;
+    border-bottom: solid 2px white;
+   }
+   .nav-item {
+    text-decoration: none;
+    color: white;
+    font-size: .75em;
+    text-align: center;
+    margin: 0 auto;
     margin: 10px;
-}
+   }
+   .nav-item:hover {
+       text-decoration: underline;
+   }
 
 
 .header-extra {
     display: flex;
     flex-flow: column;
     align-items: center;
-    width: 400px;
-    height: 200px;
-    color: white;
+    color: darkturquoise;
     justify-content: space-around;
-    padding: 0 5% 0 5%;
+
+}
+.header-extra {
+    margin: 0 auto;
+    margin-bottom: 300px;
+    text-align: center;
+    padding: 5px;
+    border-top: solid 2px darkturquoise;
+    border-bottom: solid 2px darkturquoise;
 }
 .header-extra h1 {
-    margin: 0 auto;
     font-size: 2em;
+  }
+.header-extra p {
+  font-size: 1em;
 }
 
 header {
@@ -96,46 +126,12 @@ header {
  background: url('./images/mainsea.jpg');
  height: 85%;
  width: 85%;
- min-width: 100px;
  max-width: 1000px;
  padding: 2.5%;
  background-size: cover;
  background-repeat: no-repeat;
  box-shadow: 5px 5px 1px darkturquoise;
  color: white;
- visibility: hidden;
-}
-
-.head {
-    padding: 15px;
-    border: solid 5px white;
-    border-radius: 50%;
-}
-.name {
-    letter-spacing: 10px;
-    font-size: 1.5em;
-}
-
-
-nav {
- display: flex;
- flex-flow: row;
- justify-content: space-between;
- width: 80%;
- padding-left: 10%;
- padding-right: 10%;
- text-align: center;
- background: RGBA(0, 206, 209, .5);
-}
-.nav-item {
- margin: 0px 10px 0px 10px;
- text-decoration: none;
- color: white;
- font-size: 1.5em;
- text-align: center;
-}
-.nav-item:hover {
-    text-decoration: underline;
 }
 
 .self {
@@ -157,6 +153,9 @@ nav {
     .self img {
         min-height: 200px;
         min-width: 150px;
+    }
+    .header-title {
+        font-size: 1.5em;
     }
 }
 
@@ -181,11 +180,13 @@ nav {
 }
 .read {
     cursor: pointer;
-    border: solid 2px darkturquoise;
+    border: none;
     padding: 5px;
     background: white;
     color: darkturquoise;
     font-size: 1.5em;
+    text-decoration: underline;
+    outline: none;
 }
 
 .view-info {
@@ -202,11 +203,6 @@ nav {
     width: 80%;
     border-top: solid darkturquoise 2px;
     border-bottom: solid darkturquoise 2px;
-}
-@media screen and (min-width: 700px) {
-    .view-info {
-        top: 1300px;
-    }
 }
 
 .partial {
@@ -230,7 +226,7 @@ nav {
  display: flex;
  flex-flow: column;
  text-align: center; 
- font-size: 1.75em;
+ font-size: 3em;
  margin: 0 auto;
 }
 
@@ -245,7 +241,11 @@ nav {
  text-indent: 5%;
  clear: both;
 }
-
+@media screen and (min-width: 700px) {
+    .view-info {
+        top: 1300px;
+    }
+}
 
 
 
@@ -266,16 +266,15 @@ nav {
     justify-content: space-around;
     padding: 5px;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
     .legend {
         font-size: .75em;
     }
-}
-@media screen and (max-width: 600px) {
-    .legend {
-        font-size: .45em;
+    .text-head {
+        font-size: 2em;
     }
 }
+
 .legend-key {
     align-self: center;
     border-bottom: solid 3px black;
@@ -288,11 +287,16 @@ nav {
     background: url('./images/mainsea2.jpg') no-repeat;
     background-size: cover;
     color: white;
-    min-width: 80px;
     max-width: 800px;
     margin: 0 auto;
     margin-top: 20px;
 }
+.gallery-items {
+    margin: 0 auto;
+    max-width: 800px;
+    background: RGBA(0, 236, 239, .8);
+    padding: 20px 0;
+   }
 
 .gal-partial {
     height: 50px;
@@ -302,18 +306,6 @@ nav {
     margin: 10px;
 }
 
-   .gallery-items {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: space-around;
-    min-height: 300px;
-    width: 100%;
-    background: RGBA(0, 236, 239, .8);
-    padding-top: 20px;
-   }
 
    .gal-item {
     padding: 0 1%;
