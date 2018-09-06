@@ -192,7 +192,7 @@ header {
 .view-info {
     overflow-y: scroll;
     position: absolute;
-    top: 1200px;
+    top: 1550px;
     left: 1px;
     margin: 0 auto;
     background: white;
@@ -243,7 +243,7 @@ header {
 }
 @media screen and (min-width: 700px) {
     .view-info {
-        top: 1300px;
+        top: 1700px;
     }
 }
 
