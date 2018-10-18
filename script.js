@@ -1,8 +1,10 @@
+// Header title
+const headerTitle = document.querySelector(".header-title");
+
 // Gallery selectors
 const gallery = document.querySelector('.gallery-box');
 const close = document.querySelector('.close');
 const contact = document.querySelector('.contact-wrap');
-
 
 // info selectors
 const info = document.querySelectorAll('.info');
@@ -23,6 +25,11 @@ bckgrndImg.addEventListener('load', function() {
     header.className = 'fadeIn';
 })
 bckgrndImg.src = './images/mainsea.jpg';
+
+header.style.display = "none";
+window.onload = function() {
+    header.style.display = "flex";
+}
 
 // toggling view mode for info
 for (let i = 0, j = 0; i < info.length, j < read.length; i ++, j++) {

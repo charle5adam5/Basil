@@ -184,7 +184,7 @@ header {
     padding: 5px;
     background: white;
     color: darkturquoise;
-    font-size: 1.5em;
+    font-size: 1em;
     text-decoration: underline;
     outline: none;
 }
@@ -494,13 +494,4 @@ header {
        transform: translateY(-300px);
    }
 
-   .seo-wrap {
-       max-width: 100%;
-   }
-   .seo.content {
-       color: white;
-       font-size: 1px;
-   }
-   .seo-content > a {
-    color: white;
-   }
+   
