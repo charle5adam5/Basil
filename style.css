@@ -13,6 +13,7 @@ body {
 .main-container {
     margin: 0 auto;
     margin: 10%;
+    max-width: 900px;
 }
 
 .home-container {
@@ -97,7 +98,7 @@ nav a {
 .self-portrait {
     margin: 0 auto;
     width: 50%;
-    height: auto;
+    height: 75%;
 }
 
 .content {
